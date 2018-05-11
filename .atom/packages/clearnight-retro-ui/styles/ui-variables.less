@@ -1,0 +1,227 @@
+@import './colors';
+
+// Base
+@base-background-color: @bg1;
+@base-border-color: @bg2;
+@base-accent-color: @cyan;
+@base-accent-color-light: lighten(@bg2, 15%);
+
+// Animation
+@transition-time: 400ms;
+@md-timing-function: cubic-bezier(.4, 0, .2, 1);
+
+// Background
+@background-color-info: @cyan;
+@background-color-success: @green;
+@background-color-warning: @yellow;
+@background-color-error: @red;
+@background-color-highlight: lighten(@base-background-color, 4%);
+@background-color-selected: lighten(@base-background-color, 8%);
+@app-background-color: @level-3-color;
+@level-1-color: @bg2;
+@level-2-color: @base-background-color;
+@level-3-color: @bg1;
+
+// Badges
+@badge-background-color: lighten(@background-color-highlight, 6%);
+
+// Buttons
+@button-background-color: @level-3-color;
+@button-background-color-hover: lighten(@button-background-color, 2%);
+@button-background-color-selected: @base-accent-color;
+@button-border-color: @base-border-color;
+@button-text-color-selected: contrast(@button-background-color-selected, white, hsl(@ui-hue,100%,10%), 40% );
+@button-border-color-selected: @base-border-color;
+@button-text-color-selected: contrast(@button-background-color-selected, white, hsl(@ui-hue,100%,10%), 40% );
+@button-border-color-selected: @base-border-color;
+
+// Font
+@font-family: system-ui;
+
+// Gutter
+@gutter-background-color: transparent;
+@gutter-text-color: @text-color-subtle;
+@gutter-text-color-selected: @text-color-selected;
+
+// Inputs
+@checkbox-background-color: fade(@base-accent-color, 33%);
+@input-background-color-focus: fadein(@input-background-color, 6%);
+@input-selection-color: darken(@background-color-selected, 6%);
+@input-selection-color-focus: @background-color-selected;
+@input-background-color: darken(@base-background-color, 6%);
+@input-border-color: @base-border-color;
+@checkbox-background-color: fade(@base-accent-color, 33%);
+@input-background-color-focus: fadein(@input-background-color, 6%);
+@input-selection-color: darken(@background-color-selected, 6%);
+@input-selection-color-focus: @background-color-selected;
+
+// Key Bindings
+@key-binding-border-color: hsla(0,0%,100%,.1);
+@key-binding-background-color: hsla(0,0%,100%,.1);
+
+// Overlays
+@overlay-backdrop-color: hsla(@ui-hue,@ui-saturation,5%,.5);
+@overlay-background-color: @level-2-color;
+@overlay-border-color: @base-border-color;
+
+// Panes
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @base-border-color;
+
+// Panels
+@tool-panel-background-color: @level-3-color;
+@tool-panel-border-color: @base-border-color;
+@inset-panel-background-color: lighten(@level-2-color, 4%);
+@inset-panel-border-color: fadeout(@base-border-color, 15%);
+@panel-heading-background-color: @level-2-color;
+@panel-heading-border-color: @base-border-color;
+
+// Progress
+@progress-background-color: @base-accent-color;
+
+// Scrollbars
+@scrollbar-color: @base-accent-color-light;
+@scrollbar-background-color: transparent; // source of black box bug; see: https://github.com/atom/one-light-ui/issues/4
+@scrollbar-track-color: transparent;
+@scrollbar-color-editor: contrast(@ui-syntax-color, darken(@ui-syntax-color, 18%), lighten(@ui-syntax-color, 9%) );
+@scrollbar-background-color-editor: @ui-syntax-color;
+
+// Site Colors
+@ui-site-color-1: @cyan;
+@ui-site-color-2: @teal;
+@ui-site-color-3: @orange;
+@ui-site-color-4: @magenta;
+@ui-site-color-5: @yellow;
+
+// Sizes
+@font-size: 12px;
+@input-font-size: 14px;
+@disclosure-arrow-size: 12px;
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px; // 16px renders sharpest
+@component-line-height: 25px;
+@component-border-radius: 4px;
+@tab-height: 30px;
+@input-height: 32px;
+@ui-size: 1em;
+@ui-input-size: @ui-size*1.15;
+@ui-padding: @ui-size*1.5;
+@ui-padding-pane: @ui-size*.5;
+@ui-padding-icon: @ui-padding/3.3;
+@ui-line-height: @ui-size*2;
+@ui-tab-height: @ui-padding*2.2;
+
+// Syntax
+.ui-syntax-color() {
+    @syntax-background-color: hsl(205, 20%, 25%);
+}
+.ui-syntax-color(); // fallback color
+@ui-syntax-color: @syntax-background-color;
+
+// Tabs
+@tab-bar-background-color: @level-3-color;
+@tab-bar-border-color: @base-border-color;
+@tab-background-color: @level-2-color;
+@tab-background-color-active: @level-1-color;
+@tab-background-color-hover: @level-1-color;
+@tab-border-color: @base-border-color;
+@tab-text-color: @text-color-subtle;
+@tab-text-color-active: @text-color-highlight;
+@tab-text-color-editor: contrast(@ui-syntax-color, darken(@ui-syntax-color, 50%), @text-color-highlight );
+@tab-background-color-editor: @ui-syntax-color;
+
+// Text
+@text-color: @fg1;
+@text-color-subtle: fadeout(@text-color, 40%);
+@text-color-highlight: lighten(@text-color, 20%);
+@text-color-selected: @fg2;
+@text-color-info: @blue;
+@text-color-success: @green;
+@text-color-warning: @yellow;
+@text-color-error: @red;
+@text-color-faded: fade(@text-color, 20%);
+@text-color-added: @text-color-success;
+@text-color-ignored: @text-color-subtle;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+@text-color-renamed: @text-color-info;
+
+// Tooltips
+@tooltip-background-color: @base-accent-color;
+@tooltip-text-color: contrast(@tooltip-background-color, white, hsl(@ui-hue,100%,10%), 40% );
+@tooltip-text-key-color: @tooltip-background-color;
+@tooltip-background-key-color: @tooltip-text-color;
+
+// Tree View
+@tree-view-background-color: @level-3-color;
+@tree-view-border-color: @base-border-color;
+
+
+// Packages support
+@settings-list-background-color: darken(@level-2-color, 1.5%);
+@theme-config-box-shadow: inset 0 0 3px hsla(0, 0%, 100%, .4), 0 1px 3px hsla(0, 0%, 0%, .2);
+@theme-config-box-shadow-selected: inset 0 1px 3px hsla(0, 0%, 0%, .1);
+@theme-config-border-selected: hsla(0, 0%, 100%, .75);
+
+
+// Build
+@build-terminal-background-color: darken(@level-1-color, 2%);
+
+// Imdone
+@imdone-atom-task-background-color: darken(@level-1-color, 2%);
+@imdone-atom-task-background-color-draged: @level-1-color;
+
+// Markdown Preview
+@markdown-preview-background-color: white;
+@markdown-preview-border-color: darken(white, 20%);
+@markdown-preview-code-background-color: darken(white, 30%);
+@markdown-preview-table-body-color: darken(white, 20%);
+@markdown-preview-text-color: lighten(@level-1-color, 10%);
+
+// Tool-Bar
+@tool-bar-spacer-border-color: darken(white, 30%);
+
+
+// Color guards
+@ui-s-h: hue(@ui-syntax-color);
+@ui-s-s: saturation(@ui-syntax-color);
+@ui-s-l: lightness(@ui-syntax-color);
+@ui-inv: 10%; // inverse lightness if below
+
+.ui-hue() when (@ui-s-s = 0) {
+    @ui-hue: 205;
+} // Use blue hue when no saturation
+
+.ui-hue() when (@ui-s-s > 0) {
+    @ui-hue: @ui-s-h;
+}
+.ui-hue();
+
+.ui-saturation() when (@ui-s-h =< 80) {
+    @ui-saturation: min(@ui-s-s, 5%);
+}
+
+.ui-saturation() when (@ui-s-h > 80) and (@ui-s-h < 160) {
+    @ui-saturation: min(@ui-s-s, 12%);
+}
+
+.ui-saturation() when (@ui-s-h >= 160) and (@ui-s-l < @ui-inv) {
+    @ui-saturation: min(@ui-s-s, 48%);
+}
+
+.ui-saturation() when (@ui-s-h >= 160) and (@ui-s-l >= @ui-inv) {
+    @ui-saturation: @ui-s-s;
+}
+.ui-saturation();
+
+.ui-lightness() when (@ui-s-l < @ui-inv) {
+    @ui-lightness: @ui-s-l + 8%;
+    @ui-lightness-border: @ui-lightness*.3;
+}
+
+.ui-lightness() when (@ui-s-l >= @ui-inv) {
+    @ui-lightness: min(@ui-s-l, 20%);
+    @ui-lightness-border: @ui-lightness*.6;
+}
+.ui-lightness();

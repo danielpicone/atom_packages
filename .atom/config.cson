@@ -1,0 +1,26 @@
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "gruvbox"
+    ]
+    uriHandlerRegistration: "always"
+  editor:
+    fontSize: 15
+    invisibles: {}
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "2b71a4f3-fe7a-4a40-bb44-a0db862b87bd"
+  "julia-client":
+    enableMenu: true
+    enableToolBar: true
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "uber-juno":
+    disable: true
+  welcome:
+    showOnStartup: false
