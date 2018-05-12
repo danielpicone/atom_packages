@@ -4,6 +4,7 @@
   core:
     disabledPackages: [
       "fonts"
+      "atom-terminal"
     ]
     telemetryConsent: "no"
     themes: [

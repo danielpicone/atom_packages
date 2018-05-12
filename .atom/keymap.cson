@@ -35,4 +35,14 @@
 'atom-text-editor.vim-mode-plus.insert-mode':
   'j j': 'vim-mode-plus:activate-normal-mode'
   'j k': 'vim-mode-plus:activate-normal-mode'
-  'k j': 'vim-mode-plus:activate-normal-mode' 
+  'k j': 'vim-mode-plus:activate-normal-mode'
+
+# 'atom-text-editor.vim-mode-plus.not(.normal-mode)':
+#   'j j': 'vim-mode-plus:activate-normal-mode'
+#   'j k': 'vim-mode-plus:activate-normal-mode'
+#   'k j': 'vim-mode-plus:activate-normal-mode'
+
+# 'atom-text-editor.vim-mode-plus':
+#   'j j': 'vim-mode-plus:reset-normal-mode'
+#   'j k': 'vim-mode-plus:reset-normal-mode'
+#   'k j': 'vim-mode-plus:reset-normal-mode'
