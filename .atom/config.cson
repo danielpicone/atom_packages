@@ -2,10 +2,13 @@
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
   core:
+    disabledPackages: [
+      "fonts"
+    ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "gruvbox"
+      "duotone-dark-sea-syntax"
     ]
     uriHandlerRegistration: "always"
   editor:
@@ -14,6 +17,8 @@
     scrollPastEnd: true
   "exception-reporting":
     userId: "2b71a4f3-fe7a-4a40-bb44-a0db862b87bd"
+  fonts:
+    fontFamily: "Space Mono"
   "julia-client":
     enableMenu: true
     enableToolBar: true
